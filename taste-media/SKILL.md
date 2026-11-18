@@ -1,13 +1,14 @@
 ---
 name: taste-media
-description: Companion kit for the taste-skill - objects (renders, prints), photos (the vetted photograph library) and scenes (big scenes), with a native photos.mjs whose search and fetch run against the full library.
+description: Companion kit for the taste-skill - objects (renders, prints) and photos (the vetted photograph library), with a native photos.mjs whose search and fetch run against the full library.
 ---
 
-# taste-media — objects, photos, scenes
+# taste-media — objects, photos
 
 Companion asset kits split out of the `taste-skill` folder to fit the RUFP
 import limit. Nothing is trimmed: every file of the original
-`assets/objects`, `assets/photos` and `assets/scenes` kits lives here.
+`assets/objects` and `assets/photos` kits lives here. The `assets/scenes`
+kit lives in the `taste-scenes` folder.
 
 ## Layout
 
@@ -15,7 +16,6 @@ import limit. Nothing is trimmed: every file of the original
   (`effects-objects.md` in the main skill's `references/`).
 - `assets/photos/` — the vetted photograph library: the `photos.json` catalog
   and the `img/` WebP frames.
-- `assets/scenes/` — the big scenes with their `index.json`.
 - `scripts/photos.mjs` — a native copy; `search` and `fetch` run against this
   full library from this folder.
 
@@ -24,6 +24,6 @@ import limit. Nothing is trimmed: every file of the original
 The main `taste-skill` folder keeps `photos/photos.json`, so its own
 `photos.mjs` still reads the catalog, and its `fetch` looks for the `img/`
 frames in this folder automatically (`~/.rufp/skills/taste-media/assets/photos`).
-When a main-skill step reads a scene or object demo from `assets/scenes` or
-`assets/objects` and it is not in the main folder, take it from this folder
-instead.
+When a main-skill step reads an object demo from `assets/objects` and it is
+not in the main folder, take it from this folder instead; a scene demo comes
+from the `taste-scenes` folder (`~/.rufp/skills/taste-scenes/assets/scenes`).

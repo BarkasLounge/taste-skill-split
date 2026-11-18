@@ -382,15 +382,17 @@ All in `references/`; section 3 names the one each asset needs.
 
 ## Split install (companion kits)
 
-This folder is installed with two companion folders; every original kit file
+This folder is installed with three companion folders; every original kit file
 exists, only the folder changed. When a step reads a kit path that is not in
 this folder, take it from the companion:
 
 - `assets/components`, the `assets/effects` and `assets/moments` demos —
   `~/.rufp/skills/taste-fx/assets/` (native `effects.mjs` / `moments.mjs` in
   its `scripts/`).
-- `assets/objects`, `assets/photos/img`, the `assets/scenes` demos —
+- `assets/objects` and `assets/photos/img` —
   `~/.rufp/skills/taste-media/assets/` (a native `photos.mjs` in its `scripts/`).
+- the `assets/scenes` demos and runtime —
+  `~/.rufp/skills/taste-scenes/assets/`.
 
 Still kept here: `effects/fx.js`, `effects/pick.js`, the `effects`, `moments`
 and `scenes` `index.json` files and `photos/photos.json`, so building, dealing
